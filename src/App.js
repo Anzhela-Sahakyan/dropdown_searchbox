@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Select from "react-select";
+
+import "./App.css";
 
 function App() {
+  const options = [
+    { value: "Armenia", label: "Armenia" },
+    { value: "Argentina", label: "Argentina" },
+    { value: "Italy", label: "Italy" },
+    { value: "Spain", label: "Spain" },
+    { value: "USA", label: "USA" },
+    { value: "Mexico", label: "Mexico" },
+    { value: "Panama", label: "Panama" },
+    { value: "Germany", label: "Germany" },
+    { value: "Nepal", label: "Nepal" },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Select
+        options={options}
+        placeholder="Select a country"
+        noOptionsMessage={() => "No country found"}
+      />
     </div>
   );
 }
