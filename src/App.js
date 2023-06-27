@@ -1,5 +1,5 @@
 import Select from "react-select";
-
+import globusImage from "./globus.jpg";
 import "./App.css";
 
 function App() {
@@ -17,10 +17,12 @@ function App() {
   return (
     <div className="App">
       <Select
+        className="search-box "
         options={options}
         placeholder="Select a country"
         noOptionsMessage={() => "No country found"}
       />
+      <img src={globusImage} alt="globus" className="globus"></img>
     </div>
   );
 }
