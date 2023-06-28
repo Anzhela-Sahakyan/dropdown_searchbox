@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="App">
       <Select
-        className="search-box "
         options={options}
         placeholder="Select a country"
         noOptionsMessage={() => "No country found"}
